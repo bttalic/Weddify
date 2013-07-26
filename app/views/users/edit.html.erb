@@ -1,0 +1,47 @@
+<%= provide(:title, 'Edit Profile') %>
+
+<div class="page-region">
+	<div class="page-region-content">
+		<div class="span6 offset3">
+			<h1>Sign up</h1>
+
+			<%= form_for @user, :html => { :multipart => true } do |f| %>
+			<legend>
+				<%= render 'shared/error_messages', object: f.object %>
+			</legend>
+		</br>
+		<%= f.label :name %>
+		<div class="input-control text">
+			<%= f.text_field :name %>
+			<button class="btn-clear"></button>
+		</div>
+
+		<%= f.label :email %>
+		<div class="input-control text">
+			<%= f.text_field :email %>
+			<button class="btn-clear"></button>
+		</div>
+
+		<%= f.label :password %>
+		<div class="input-control password">
+			<%= f.password_field :password %>
+			<button class="btn-reveal"></button>
+		</div>
+
+		<%= f.label :password_confirmation, "Confirmation" %>
+		<div class="input-control password">
+			<%= f.password_field :password_confirmation %>
+			<button class="btn-reveal"></button>
+		</div>
+		<%= f.label :avatar %>
+	</br>
+	<%= f.file_field :avatar %>
+	<div class="user-info">
+	<%= image_tag @user.avatar.url %>
+</div>
+</br>
+<%= f.submit "Create my account", class: "btn btn-large btn-primary" %>
+<% end %>
+</div>
+</div>
+</div>

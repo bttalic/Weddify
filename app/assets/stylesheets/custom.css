@@ -1,0 +1,85 @@
+.header, footer {
+ background-color: rgba(0,0,0,0.40);
+}
+
+.navbar-inverse .brand, .navbar-inverse .nav > li > a,
+.header, .navbar {
+ color: #FBFBEF !important;
+
+}
+
+.blog {
+	zoom: 1;
+ filter: alpha(opacity=50);
+ background: rgba(0,0,0, 0.40);
+ color: #eee !important;
+
+}
+
+.blog img {
+	margin-left:10%;
+}
+
+/*
+.container {
+ background-image: image-url('background.jpg');
+}
+
+*/
+
+.hero-unit {
+ zoom: 1;
+ filter: alpha(opacity=50);
+ background: rgba(0,0,0, 0.40);
+ color: #FBFBEF !important;
+ text-align: center;
+}
+
+.navbar-fixed-bottom {
+ right: inherit;
+ left: inherit;
+ font-size: 20px;
+ margin-bottom: 10px;
+}
+
+.thumbnails .thumbnail .caption {
+ color: #a78b75 !important;
+ zoom: 1;
+ filter: alpha(opacity=50);
+ background: rgba(0,0,0, 0.40);
+ color: #FBFBEF !important;
+ text-align: center;
+ height: 190px;
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
+}
+
+.thumbnail {
+ height:290px;
+
+}
+
+.thumbnail img {
+ height: 80px;
+ width: 80px;
+}
+
+body {
+ background-repeat: no-repeat;
+ background-attachment:fixed;
+}
+
+footer {
+ height: 50px;
+ clear: both;
+ font-weight: bolder;
+ font-size: 17px;
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
+}
+
+footer a {
+ color: #fbfbfb;
+}

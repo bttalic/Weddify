@@ -1,0 +1,38 @@
+<%= provide(:title, 'Users') %>
+<div class="page">
+	<div class="page-header">
+		<div class="page-header-content">
+			<h1>Users</h1>
+		</div>
+	</div>
+
+	<% if signed_in? && current_user.admin? %>
+
+<div class="span offset1">
+<%= will_paginate @users %>
+	<% @users.each do |user| %>
+
+	<div class="tile triple bg-color-<%=@colors[rand(16)]%>" style="margin-top:20px">
+			<div class="tile-content user-info">
+			<%= link_to image_tag(user.avatar.url,class:"place-right"), user %>
+			<h4><%= link_to user.name, user %></h4>
+			<p>
+				<%= link_to("Added phones: #{user.phones.count}", user) %>
+			</br>
+				<a>Comments: <%= user.comments.count %></a>
+			</p>
+			<p><% if current_user.admin? && !current_user?(user) %>
+				| <%= link_to "delete", user, method: :delete, confirm: "You sure?" %>
+				<% end %></p>
+			</div>
+		</div>
+
+		<%end%>
+	</div>
+
+		<%end%>
+
+
+
+
+	</div>
