@@ -2,11 +2,6 @@
  background-color: rgba(0,0,0,0.40);
 }
 
-.navbar-inverse .brand, .navbar-inverse .nav > li > a,
-.header, .navbar {
- color: #FBFBEF !important;
-
-}
 
 .blog {
 	zoom: 1;
