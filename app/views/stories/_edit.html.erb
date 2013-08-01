@@ -1,0 +1,14 @@
+
+
+
+<div id='story_edit' class="registration-form hidden" >
+	<%= form_for(@story) do |f| %>
+
+	<%= f.label t("tell_you_story")+':' %>
+</br>
+<%= f.text_area :story_text %>
+
+</br>
+<%= f.submit "Spasi", class: "btn btn-default pull-right" %>
+<% end %> 
+</div>

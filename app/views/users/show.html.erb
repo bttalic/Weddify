@@ -1,57 +1,32 @@
-   <%= provide(:title, @user.name) %>
-   <div class="page">
-   	<div class="page-header">
-   		<div class="page-header-content">
-   			<h1><%= @user.name %></h1>
-   		</div>
-   	</div>
+   <%= provide(:title, "#{@user.name_groom} i #{@user.name_bride}") %>
 
-   	<div class="page-region">
-   		<div class="page-region-content">
-   			<asside class="place-right">
-   				<div class="tile triple bg-color-blueDark">
-   					<div class="tile-content user-info">
-   						<%= image_tag @user.avatar.url, class:"place-right" %>
-   						<h4><%= @user.name %></h4>
-   						<p>
-   							<a>Added phones: <%= @user.phones.count %></a>
-                     </br>
-   							<a>Comments: <%= @user.comments.count %></a>
-   						</p>
-   					</div>
-   				</div>
-   			</asside>
+   <div class='cover'>
+    <%= image_tag (@user.avatar.url) %>  
+    <div id='welcome_message'>
+     Dobro Dosli na stranicu <%= "#{@user.name_groom} i #{@user.name_bride} #{@user.last_name}" %>
+   </div> 	
+ </div>
 
-            <div class="span10 offset1">
-   			<h3><%= @user.name %>'s Phones</h3>
-
-
-   			<% @phones.each do |phone| %>
-
-   			<div class="tile bg-color-<%=@colors[rand(16)]%> double">
-   				<div class="tile-content">
-   					<div class="phone_index_image"><%= link_to image_tag(phone.picture.url, :height => "100px", :width => "100px"), phone %></div>
-   					<div class="phone_index_link"><%= link_to phone.make+' '+phone.model, phone %></div>
-                  <div class="phone_index_link">Comments: <%= phone.comments.count %></div>
-
-   					<%if signed_in? && current_user.admin? %>
-
-   					<div class="phone_index_admin_links">
-   						<%= link_to 'Show', phone %> |
-   						<%= link_to 'Edit', edit_phone_path(phone) %> |
-   						<%= link_to 'Delete', phone, method: :delete, data: { confirm: 'Are you sure?' } %>
-   					</div>
-   					<% end %>
-   				</div>
-   			</div>
-
-   			<% end %>
-         </div>
-
-   			<div class="clear" style="clear:both;"></div>
-   			<br />
-   			<div class="phone_index_page_links"><%= will_paginate @phones %></div>
-   		</div>
-
-   	</div>
+ <div class="panel panel-story">
+  <div class="panel-heading">Nasa Prica:
+   <% if signed_in? && current_user?(@user) %>
+   <a href='javascript:void(0)' class='btn btn-default' id='show_story_edit_button'> Uredi </a>
+   <% end %>
+ </div>
+ <div id='story_content'>
+  <% if @user.story && @user.story.story_text %>
+  <%= simple_format(@user.story.story_text) %>
+  <% else %>
+  <p> Jos nismo podjelili nasu pricu </p>
+  <% end %>
+  <% if current_user?(@user) %>
+  <%= render 'stories/edit'  %>
+  <% end %>
 </div>
+
+</div>
+
+<%= render 'wishlist'  %>
+<% if signed_in? && current_user.id==@user.id %>
+<%= render 'item_form' %>
+<% end %>

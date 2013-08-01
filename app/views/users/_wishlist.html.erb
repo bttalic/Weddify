@@ -1,0 +1,6 @@
+<h1><%= t('wishlist') %></h1>
+<% if @items == nil %>
+<%= t('empty list') %>
+<% else %>
+<%= render 'items/item'%>
+<% end %>

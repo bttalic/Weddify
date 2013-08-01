@@ -1,0 +1,16 @@
+<% if object.errors.any? %>
+<div id="error_explanation">
+	<div class="panel panel-danger">
+		<div class="panel-heading">
+          <h3 class="panel-title" style="text-align:center">Formular ima greške</h3>
+        </div>
+	<ul>
+		<% object.errors.full_messages.each do |msg| %>
+		<% if msg.mb_chars.length > 1 %>
+		<li><%= msg %> </li>
+		<% end %>
+		<% end %>
+	</ul>
+	</div>
+</div>
+<% end %>

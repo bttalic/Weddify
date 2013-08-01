@@ -3,3 +3,98 @@
 
 en:
   hello: "Hello world"
+  new_user: "Novi korisnik"
+  wedding_guest: "Gost vjencanja"
+  created_profile: "Napravili ste novi profil"
+  tell_you_story: "Napisite vasu pricu"
+  wishlist: "Lista Zelja"
+  add: 'Dodaj'
+  empty_story: "Prica ne moze biti prazna"
+  item_added: "Predmet dodan na listu"
+  item_deleted: "Predmet izbrisan"
+  invalid_login_data: 'Kombinacija e-maila i sifre ne postoji'
+  profile_updated: "Profil azuriran"
+  user_deleted: "Korisnik je izbrisan"
+  confirm: "Da li ste sigurni?"
+  delete: "Izbrisi"
+  signin: 'Prijava'
+  signout: "Odjava"
+  profile: "Profil"
+  sessions:
+    new:
+     email: "Jedan e-mail"
+     password: "Vasa sifra"
+     signin: 'Prijava'
+
+ 
+
+
+  activerecord:
+    models:
+      user: "Korisnik"
+      story: "Prica"
+      item: "Predmet"
+    attributes:
+      user:
+        login: "Prijava"
+        name_groom: "Ime Mladoženje"
+        name_bride: "Ime Mlade"
+        email_groom: "e-mail Mladoženje"
+        email_bride: "e-mail Mlade"
+        last_name: "Vaše buduće prezime"
+        password: "Šifra"
+        password_confirmation: "Potvrda Šifre"
+        avatar: "Profilna slika"
+        password_digest: ''
+      story:
+       story_text: "Prica"
+       user_id: "Korisnicki id"
+      item:
+        name: "Naziv"
+        link: "Link"
+        priority: "Prioritet"
+      
+    errors:
+      models:
+        user:
+          attributes:
+            email_groom:
+             blank: "Oba e-maila su potrebna za vaš zajednički profil."
+             invalid: "nije validan"
+             taken: "je već zauzet"
+
+
+            email_bride:
+             blank: "Oba e-maila su potrebna za vaš zajednički profil."
+             invalid: "nije validan"
+             taken: "je već zauzet"
+            
+            name_groom:
+              blank: "Teško je napraviti vjenčanje bez mladoženje. Popunite ime."
+            
+            name_bride:
+              blank: "Teško je napraviti vjenčanje bez mlade. Popunite ime."
+
+            last_name:
+             blank: "ne može biti prazno"
+
+            avatar:
+             content_type_invalid: "Slika moze biti u formatima: png, gif ili jpeg" #ovo ne radi, unutar modela je
+
+            password:
+             blank: "ne može biti prazna"
+             confirmation: "Unesene šifre nisu jednake"
+             too_short: "Šifra je pre kratka, mora imati najmanje 6 znakova"
+
+            password_confirmation:
+             blank: "ne može biti prazna"
+
+            password_digest:
+             blank: ''
+        item:
+          attributes:
+            name:
+             blank: "ne moze biti prazan"
+            priority:
+             blank: "ne moze biti prazan"
+             inclusion: "nije u zadanom rasponu"

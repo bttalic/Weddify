@@ -1,87 +1,391 @@
-.header, footer {
- background-color: rgba(0,0,0,0.40);
+
+.thumbnails {
+  list-style:none;
+  *zoom:1;
+  padding:0;
 }
-
-.navbar-inverse .brand, 
-.navbar-inverse .nav > li > a,
-.header, .navbar {
- color: #FBFBEF !important;
-
+.thumbnails:before,.thumbnails:after {
+  display:table;
+  line-height:0;
+  content:"";
 }
-
-.blog {
-	zoom: 1;
- filter: alpha(opacity=50);
- background: rgba(0,0,0, 0.40);
- color: #eee !important;
-
+.thumbnails:after {
+  clear:both;
 }
-
-.blog img {
-	margin-left:10%;
+.row-fluid .thumbnails {
+  margin-left:0;
 }
-
-/*
-.container {
- background-image: image-url('background.jpg');
+.thumbnails>li {
+  float:left;
+  margin-bottom:20px;
+  clear:both;
+  width:100%;
 }
-
-*/
-
-.hero-unit {
- zoom: 1;
- filter: alpha(opacity=50);
- background: rgba(0,0,0, 0.40);
- color: #FBFBEF !important;
- text-align: center;
-}
-
-.navbar-fixed-bottom {
- right: inherit;
- left: inherit;
- font-size: 20px;
- margin-bottom: 10px;
-}
-
-.thumbnails .thumbnail .caption {
- color: #a78b75 !important;
- zoom: 1;
- filter: alpha(opacity=50);
- background: rgba(0,0,0, 0.40);
- color: #FBFBEF !important;
- text-align: center;
- height: 190px;
-  -webkit-border-radius: 6px;
-     -moz-border-radius: 6px;
-          border-radius: 6px;
-}
-
 .thumbnail {
- height:290px;
-
+  display:block;
+  padding:4px;
+  line-height:20px;
+  border:1px solid #ddd;
+  -webkit-border-radius:4px;
+  -moz-border-radius:4px;
+  border-radius:4px;
+  -webkit-box-shadow:0 1px 3px rgba(0,0,0,0.055);
+  -moz-box-shadow:0 1px 3px rgba(0,0,0,0.055);
+  box-shadow:0 1px 3px rgba(0,0,0,0.055);
+  -webkit-transition:all 0.2s ease-in-out;
+  -moz-transition:all 0.2s ease-in-out;
+  -o-transition:all 0.2s ease-in-out;
+  transition:all 0.2s ease-in-out;
 }
-
-.thumbnail img {
- height: 80px;
- width: 80px;
+a.thumbnail:hover,a.thumbnail:focus {
+  border-color:#0088cc;
+  -webkit-box-shadow:0 1px 4px rgba(0,105,214,0.25);
+  -moz-box-shadow:0 1px 4px rgba(0,105,214,0.25);
+  box-shadow:0 1px 4px rgba(0,105,214,0.25);
 }
-
-body {
- background-repeat: no-repeat;
- background-attachment:fixed;
+.thumbnail>img {
+  display:block;
+  max-width:100%;
+  margin-right:auto;
+  margin-left:auto;
 }
-
+.thumbnail .caption {
+  padding:9px;
+  color:#555555;
+}
 footer {
-	width:100%;
- height: 50px;
- clear: both;
- font-weight: bolder;
- font-size: 17px;
-  -webkit-border-radius: 6px;
-     -moz-border-radius: 6px;
-          border-radius: 6px;
+  background-color:rgba(0,0,0,0.40);
+  bottom: 0;
+    height: 60px;
+    left: 0;
+    position: fixed;
+    right: 0;
 }
 
-footer a {
- color: #fbfbfb;
+.navbar-inverse .brand,.navbar-inverse .nav>li>a,.header,.navbar {
+  color:#FBFBEF !important;
 }
+.blog {
+  zoom:1;
+  filter:alpha(opacity=50);
+  background:rgba(0,0,0,0.40);
+  color:#eee !important;
+}
+.blog img {
+  margin-left:10%;
+}
+body {
+  /*background-image:url('background.jpg')!important;*/
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+}
+.hero-unit {
+  zoom:1;
+  filter:alpha(opacity=50);
+  background:rgba(0,0,0,0.40);
+  color:#FBFBEF !important;
+  text-align:center;
+}
+.thumbnails .thumbnail .caption {
+  zoom:1;
+  filter:alpha(opacity=50);
+  color:#474949 !important;
+  text-align:center;
+  height:190px;
+  -webkit-border-radius:6px;
+  -moz-border-radius:6px;
+  border-radius:6px;
+  height:260px;
+}
+.thumbnail {
+  height:350px;
+  width:100%;
+  margin-bottom:450px;
+  z-index:0;
+  background-color:rgba(255,255,255,0.99) !important;
+}
+.thumbnail img {
+  height:80px;
+  width:80px;
+}
+body {
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+}
+
+
+.registration-form {
+  background:rgba(0,0,0,0.40);
+    color:#FBFBEF !important;
+    width:500px;
+    padding:10px;
+    margin-bottom:40px;
+  -webkit-border-radius:6px;
+  -moz-border-radius:6px;
+  border-radius:6px;
+}
+.registration-form label {
+  font-weight:bolder;
+}
+.registration-form .btn[type="submit"] {
+  left:180px;
+  position:relative;
+}
+.hidden {
+  display: none;
+}
+/*edits 28.07. 10:03PM*/
+.thumbnail-content {
+  border-top:1px solid #474949;
+  margin-top:80px;
+}
+.thumbnail-top h3 {
+    display:inline;
+}
+ul.thumbnails {
+  margin-top:450px;
+}
+
+
+/*Back to top*/
+#scrollToTop:link,#scrollToTop:visited {
+  display:none;
+  position:fixed;
+  bottom:20px;
+  right: 20px;
+}
+
+
+
+
+    /* CUSTOMIZE THE NAVBAR
+    -------------------------------------------------- */
+
+    /* Special class on .container surrounding .navbar, used for positioning it into place. */
+    .navbar-wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 10;
+      margin-top: 20px;
+      margin-bottom: -90px; /* Negative margin to pull up carousel. 90px is roughly margins and height of navbar. */
+    }
+    .navbar-wrapper .navbar {
+
+    }
+
+    /* Remove border and change up box shadow for more contrast */
+    .navbar .navbar-inner {
+      border: 0;
+      -webkit-box-shadow: 0 2px 10px rgba(0,0,0,.25);
+         -moz-box-shadow: 0 2px 10px rgba(0,0,0,.25);
+              box-shadow: 0 2px 10px rgba(0,0,0,.25);
+    }
+
+    /* Downsize the brand/project name a bit */
+    .navbar .brand {
+      padding: 14px 20px 16px; /* Increase vertical padding to match navbar links */
+      font-size: 16px;
+      font-weight: bold;
+      text-shadow: 0 -1px 0 rgba(0,0,0,.5);
+    }
+
+    /* Navbar links: increase padding for taller navbar */
+    .navbar .nav > li > a {
+      padding: 15px 20px;
+    }
+
+    /* Offset the responsive button for proper vertical alignment */
+    .navbar .btn-navbar {
+      margin-top: 10px;
+    }
+
+
+
+
+ /* CUSTOMIZE THE CAROUSEL
+    -------------------------------------------------- */
+
+    /* Carousel base class */
+    .carousel {
+      width:100%;
+      margin-bottom: 0px;
+      padding-top: 0px;
+    }
+
+    .carousel .container {
+      position: relative;
+      z-index: 9;
+    }
+
+    .carousel-control {
+      height: 80px;
+      margin-top: 0;
+      font-size: 120px;
+      text-shadow: 0 1px 1px rgba(0,0,0,.4);
+      background-color: transparent;
+      border: 0;
+      z-index: 10;
+    }
+
+    .carousel .item {
+      height: 500px;
+    }
+    .carousel img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      height: 500px;
+    }
+
+    .carousel-caption {
+      background-color: transparent;
+      position: static;
+      max-width: 550px;
+      padding: 0 20px;
+      margin-top: 200px;
+    }
+    .carousel-caption h1,
+    .carousel-caption .lead {
+      margin: 0;
+      line-height: 1.25;
+      color: #fff;
+      text-shadow: 0 1px 1px rgba(0,0,0,.4);
+    }
+    .carousel-caption .btn {
+      margin-top: 10px;
+    }
+
+      /* RESPONSIVE CSS 
+    -------------------------------------------------- */
+
+    @media (max-width: 979px) {
+
+      .container.navbar-wrapper {
+        margin-bottom: 0;
+        width: auto;
+      }
+      .navbar-inner {
+        border-radius: 0;
+        margin: -20px 0;
+      }
+
+      .carousel .item {
+        height: 500px;
+      }
+      .carousel img {
+        width: auto;
+        height: 500px;
+      }
+
+      .featurette {
+        height: auto;
+        padding: 0;
+      }
+      .featurette-image.pull-left,
+      .featurette-image.pull-right {
+        display: block;
+        float: none;
+        max-width: 40%;
+        margin: 0 auto 20px;
+      }
+    }
+
+
+    @media (max-width: 767px) {
+
+      .navbar-inner {
+        margin: -20px;
+      }
+
+      .carousel {
+        margin-left: -20px;
+        margin-right: -20px;
+      }
+      .carousel .container {
+
+      }
+      .carousel .item {
+        height: 300px;
+      }
+      .carousel img {
+        height: 300px;
+      }
+      .carousel-caption {
+        width: 65%;
+        padding: 0 70px;
+        margin-top: 100px;
+      }
+      .carousel-caption h1 {
+        font-size: 30px;
+      }
+      .carousel-caption .lead,
+      .carousel-caption .btn {
+        font-size: 18px;
+      }
+
+      .marketing .span4 + .span4 {
+        margin-top: 40px;
+      }
+
+      .featurette-heading {
+        font-size: 30px;
+      }
+      .featurette .lead {
+        font-size: 18px;
+        line-height: 1.5;
+      }
+
+      ul.nav li.dropdown:hover ul.dropdown-menu { 
+  display: block; 
+  }
+}
+
+
+/* bootstrap 3 helpers */
+
+.navbar-form input, .form-inline input {
+  width:auto;
+}
+
+.container-carousel {
+width: 100%;
+}
+
+
+header {
+  height:100%;
+}
+
+
+#nav.affix {
+    position: fixed;
+    top: 0;
+    width: 100%
+}
+
+
+
+
+/*carousel shitty hover transparent*/
+
+.carousel-control.left {
+  background-image: none;
+}
+
+.carousel-control.right {
+  background-image: none!important;
+}
+
+/* dropdown hover */
+
+ul.nav li.dropdown:hover ul.dropdown-menu{
+    display: block;    
+}
+
+
+/*SOCIAL*/
+
+

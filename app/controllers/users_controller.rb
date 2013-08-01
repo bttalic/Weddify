@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-	before_filter :signed_in_user, only: [:index, :edit, :update, :destroy]
+	before_filter :signed_in_user, only: [:edit, :update]
 	before_filter :correct_user, only: [:edit, :update]
 	before_filter :admin_user, only: :destroy
 
@@ -9,16 +9,31 @@ class UsersController < ApplicationController
 	end
 
 	def show
-		@user=User.find(params[:id])
-		@phones=@user.phones.paginate(:page => params[:page], :per_page => 12)
-		@colors=["green", "greenDark","greenLight","magenta","pink","pinkDark","yellow","darken","purple","teal","blue","blueDark" ,"orange","orangeDark","red","redLight"]
+		@user=User.where("lower(name_groom) =? AND lower(name_bride) =? AND lower(last_name) =? " ,params[:name_groom], params[:name_bride], params[:last_name]).first
+		if @user == nil
+			@user = User.find_by_id(params[:id])
+		end
+
+		if !@user || @user == nil
+			redirect_to root_path
+			return
+		end
+
+		@story = Story.find_by_user_id(@user.id)
+		@items=Item.find_all_by_user_id(@user.id)
 	end
 
 	def create
 		@user = User.new(params[:user])
 		if @user.save
+			@user.wishlist=Wishlist.new
+			@user.wishlist.user_id=@user.id
+			@user.wishlist.save
+			@user.story = Story.new
+			@user.story.user_id=@user.id
+			@user.story.save
 			sign_in @user
-			flash[:green] = "You have created a new profile!"
+			flash[:green] = t('created_profile')
 			redirect_to @user
 		else
 			render 'new'
@@ -31,7 +46,7 @@ class UsersController < ApplicationController
 
 	def update
 		if @user.update_attributes(params[:user])
-			flash[:green] = "Profile updated"
+			flash[:green] = t('profile_updated')
 			sign_in @user
 			redirect_to @user
 		else
@@ -41,18 +56,15 @@ class UsersController < ApplicationController
 
 	def index
 		@users = User.paginate(:page => params[:page], :per_page => 20)
-		 @colors=["green", "greenDark","greenLight","magenta","pink","pinkDark","yellow","darken","purple","teal","blue","blueDark" ,"orange","orangeDark","red","redLight"]
 	end
 
 	def destroy
 		User.find(params[:id]).destroy
-		flash[:green] = "User destroyed."
+		flash[:green] = t('user_deleted')
 		redirect_to root_path #users_path
 	end
 
-
 	private
-
 	def correct_user
 		@user = User.find(params[:id])
 		redirect_to(root_url) unless current_user?(@user)
