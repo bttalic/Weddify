@@ -21,14 +21,14 @@
 /* user profile page */
 
 @font-face {
-    font-family: 'england_hand_dbregular';
-    src: url('fonts/england.eot');
-    src: url('fonts/england.eot?#iefix') format('embedded-opentype'),
-         url('fonts/england.woff') format('woff'),
-         url('fonts/england.ttf') format('truetype'),
-         url('fonts/england.svg#england_hand_dbregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
+	font-family: 'england_hand_dbregular';
+	src: url('fonts/england.eot');
+	src: url('fonts/england.eot?#iefix') format('embedded-opentype'),
+	url('fonts/england.woff') format('woff'),
+	url('fonts/england.ttf') format('truetype'),
+	url('fonts/england.svg#england_hand_dbregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
 }
 
 
@@ -71,4 +71,36 @@
 /* user profile story partial */
 .hidden {
 	display: none;
+}
+
+/* gallery */
+
+#gallery {
+	display: inline;
+}
+
+#gallery img {
+	max-height: 100px;
+	max-width: 100px;
+}
+
+#gallery .active {
+	max-height: 300px;
+	max-width: 300px;
+}
+
+#show_image {
+	position:absolute;
+	background-color:rgba(0, 0, 0, 0.7);
+	z-index:9999999;
+	
+}
+
+#show_image img {
+	position: relative;
+	vertical-align: middle;
+	top:20%;
+	left:20%;
+	max-width: 1000px;
+	max-height: 500px;
 }

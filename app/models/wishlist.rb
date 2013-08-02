@@ -5,7 +5,6 @@ class Wishlist < ActiveRecord::Base
   has_many :items, dependent: :destroy
 
 
-  validates :item_id, presence: true
   validates :user_id, presence: true
 
   def items

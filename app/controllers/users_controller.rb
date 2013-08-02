@@ -21,6 +21,7 @@ class UsersController < ApplicationController
 
 		@story = Story.find_by_user_id(@user.id)
 		@items=Item.find_all_by_user_id(@user.id)
+		@photos = @user.gallery.photos
 	end
 
 	def create
@@ -29,9 +30,12 @@ class UsersController < ApplicationController
 			@user.wishlist=Wishlist.new
 			@user.wishlist.user_id=@user.id
 			@user.wishlist.save
-			@user.story = Story.new
-			@user.story.user_id=@user.id
+			story = Story.new
+			story.user_id = @user.id
+			story.story_text = t('tell_your_story')
+			@user.story = story
 			@user.story.save
+			@user.gallery=Gallery.new
 			sign_in @user
 			flash[:green] = t('created_profile')
 			redirect_to @user

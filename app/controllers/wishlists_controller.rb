@@ -1,5 +1,5 @@
 class WishlistsController < ApplicationController
-	before_filter :signed_in_user #, :correct_user
+	#before_filter :signed_in_user #, :correct_user
 
 def new
 	Wishlist.new
@@ -13,7 +13,7 @@ def create
   end
 
   @wishlist.user_id = current_user.id
-  @wishlist.user_id=current_user.id
+  @wishlist.user_id = current_user.id
   if @wishlist.save
   	redirect_to current_user
   end

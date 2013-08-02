@@ -2,11 +2,11 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  page_url: 'localhost:3000'
   new_user: "Novi korisnik"
   wedding_guest: "Gost vjencanja"
   created_profile: "Napravili ste novi profil"
-  tell_you_story: "Napisite vasu pricu"
+  tell_your_story: "Napisite vasu pricu"
   wishlist: "Lista Zelja"
   add: 'Dodaj'
   empty_story: "Prica ne moze biti prazna"
@@ -20,6 +20,7 @@ en:
   signin: 'Prijava'
   signout: "Odjava"
   profile: "Profil"
+  share_with_friends: "Podijelite sa prijateljima"
   sessions:
     new:
      email: "Jedan e-mail"

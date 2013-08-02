@@ -11,7 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130730223439) do
+ActiveRecord::Schema.define(:version => 20130801221703) do
+
+  create_table "galleries", :force => true do |t|
+    t.integer  "photo_id"
+    t.integer  "user_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "galleries", ["user_id"], :name => "index_galleries_on_user_id", :unique => true
 
   create_table "items", :force => true do |t|
     t.integer  "wishlist_id"
@@ -26,6 +35,18 @@ ActiveRecord::Schema.define(:version => 20130730223439) do
 
   add_index "items", ["wishlist_id", "id"], :name => "index_items_on_wishlist_id_and_id", :unique => true
 
+  create_table "photos", :force => true do |t|
+    t.string   "title"
+    t.string   "description"
+    t.integer  "gallery_id"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+  end
+
   create_table "stories", :force => true do |t|
     t.integer  "user_id"
     t.text     "story_text"
@@ -33,7 +54,6 @@ ActiveRecord::Schema.define(:version => 20130730223439) do
     t.datetime "updated_at", :null => false
   end
 
-  add_index "stories", ["story_text"], :name => "index_stories_on_story_text"
   add_index "stories", ["user_id"], :name => "index_stories_on_user_id", :unique => true
 
   create_table "users", :force => true do |t|

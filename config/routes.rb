@@ -5,6 +5,7 @@ Weddify::Application.routes.draw do
   resources :stories 
   resources :sessions, only: [:new, :create, :destroy]
   resources :items
+  resources :photos
 
   root to: 'static_pages#home'
   match '/home', to: 'static_pages#home'

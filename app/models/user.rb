@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
 
 	def check_content_type
 		if !['image/jpeg', 'image/gif','image/png'].include?(self.avatar_content_type)
-    errors[:base] << ("Slika '#{self.avatar_file_name}' nema validnu ekstenziju, koristite img, gif ili png") # or errors.add
+    errors[:base] << ("Slika '#{self.avatar_file_name}' nema validnu ekstenziju, koristite img, gif ili png")
 end
 end 
 
@@ -36,6 +36,7 @@ validates :last_name, presence: true
 
 has_one :story, dependent: :destroy
 has_one :wishlist, dependent: :destroy
+has_one :gallery, dependent: :destroy
 
 private
 def create_remember_token

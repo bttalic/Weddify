@@ -6,7 +6,9 @@
      Dobro Dosli na stranicu <%= "#{@user.name_groom} i #{@user.name_bride} #{@user.last_name}" %>
    </div> 	
  </div>
-
+ <% if signed_in? && current_user?(@user) %>
+   <h3> <%= t('share_with_friends') %>: <%= t('page_url')+"/#{@user.name_groom}.#{@user.name_bride}.#{@user.last_name}" %>
+   <% end %>
  <div class="panel panel-story">
   <div class="panel-heading">Nasa Prica:
    <% if signed_in? && current_user?(@user) %>
@@ -30,3 +32,5 @@
 <% if signed_in? && current_user.id==@user.id %>
 <%= render 'item_form' %>
 <% end %>
+
+<%= render 'image_upload' %>

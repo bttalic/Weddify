@@ -8,6 +8,5 @@ class CreateStories < ActiveRecord::Migration
     end
 
 	add_index :stories, :user_id, unique: true
-	add_index :stories, :story_text  
   end
 end

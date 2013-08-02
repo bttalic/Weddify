@@ -1,0 +1,13 @@
+<div id="gallery">
+	<% if !@photos.empty? %>
+	<% @photos.each_with_index do |photo, index| %>
+	<% if index == 0 %>
+	<%= image_tag(photo.image.url,class: "active") %>
+	<% elsif index >2 %>
+	<%= image_tag(photo.image.url,class: "hidden") %>
+	<% else %> 
+	<%= image_tag(photo.image.url) %>
+	<% end %>
+	<% end %>
+	<% end %>
+</div>
