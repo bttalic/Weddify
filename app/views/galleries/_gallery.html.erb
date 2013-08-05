@@ -1,0 +1,11 @@
+<% if !@photos.empty? %>
+<% @photos.each_with_index do |photo, index| %>
+<div class='gallery_photo'>
+<%= image_tag(photo.image.url) %>
+</br>
+<%= link_to t('delete'), photo, method: :delete,
+confirm: t('confirm'),
+title: photo.title %>
+</div>
+<% end %>
+<% end %>
