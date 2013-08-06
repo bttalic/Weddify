@@ -11,15 +11,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130801221703) do
+ActiveRecord::Schema.define(:version => 20130805145828) do
 
   create_table "galleries", :force => true do |t|
     t.integer  "photo_id"
     t.integer  "user_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.integer  "provider_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
+  add_index "galleries", ["provider_id"], :name => "index_galleries_on_provider_id", :unique => true
   add_index "galleries", ["user_id"], :name => "index_galleries_on_user_id", :unique => true
 
   create_table "items", :force => true do |t|
@@ -47,13 +49,33 @@ ActiveRecord::Schema.define(:version => 20130801221703) do
     t.datetime "image_updated_at"
   end
 
+  create_table "providers", :force => true do |t|
+    t.string   "name"
+    t.string   "password_digest"
+    t.integer  "category"
+    t.string   "email"
+    t.string   "remember_token"
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
+  end
+
+  add_index "providers", ["email"], :name => "index_providers_on_email", :unique => true
+  add_index "providers", ["name"], :name => "index_providers_on_name", :unique => true
+  add_index "providers", ["remember_token"], :name => "index_providers_on_remember_token"
+
   create_table "stories", :force => true do |t|
     t.integer  "user_id"
     t.text     "story_text"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.integer  "provider_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
+  add_index "stories", ["provider_id"], :name => "index_stories_on_provider_id", :unique => true
   add_index "stories", ["user_id"], :name => "index_stories_on_user_id", :unique => true
 
   create_table "users", :force => true do |t|

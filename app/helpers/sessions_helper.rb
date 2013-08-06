@@ -36,4 +36,9 @@ module SessionsHelper
 		redirect_to(session[:return_to] || default)
 		session.delete(:return_to)
 	end
+
+	def sign_in_provider(provider)
+		cookies.permanent[:remember_token] = provider.remember_token
+		current_provider = provider
+	end
 end

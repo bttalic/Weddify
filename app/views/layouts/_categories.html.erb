@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+.row::after {
+    clear: both;
+}
+.row::before, .row::after {
+    line-height: 0;
+    display: table;
+    content: "";
+}
+.row::after {
+    clear: both;
+}
+.row::before, .row::after {
+    line-height: 0;
+    display: table;
+    content: "";
+}
+.row {
+    margin-left: -30px;
+}
+.row {
+    margin-left: -20px;
+}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    font: inherit;
+    margin: 0px;
+    padding: 0px;
+    border: 0px currentColor;
+    border-image: none;
+    vertical-align: baseline;
+    font-size-adjust: inherit;
+    font-stretch: inherit;
+}
+.page-container {
+    margin-top: 3em;
+}
+.span9 {
+    width: 870px;
+}
+[class*='span'] {
+    margin-left: 30px;
+    float: left;
+    min-height: 1px;
+}
+.span9 {
+    width: 700px;
+}
+[class*='span'] {
+    margin-left: 20px;
+    float: left;
+    min-height: 1px;
+}
+.container::after {
+    clear: both;
+}
+.container::before, .container::after {
+    line-height: 0;
+    display: table;
+    content: "";
+}
+.container, .navbar-static-top .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {
+    width: 1170px;
+}
+.container {
+    margin-right: auto;
+    margin-left: auto;
+}
+.container, .navbar-static-top .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {
+    width: 940px;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
+    display: block;
+}
+body {
+    background: rgb(241, 241, 241);
+    font: 14px/21px "Open Sans", sans-serif;
+    color: rgb(134, 134, 134);
+    -ms-overflow-x: hidden;
+    font-size-adjust: none;
+    font-stretch: normal;
+}
+body {
+    line-height: 100%;
+}
+body {
+    margin: 0px;
+    color: rgb(51, 51, 51);
+    line-height: 20px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    background-color: rgb(255, 255, 255);
+}
+html {
+    font-size: 100%;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+.span3 {
+    width: 270px;
+}
+.span3 {
+    width: 220px;
+}
+.article-box {
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(225, 225, 225);
+    border-image: none;
+    position: relative;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
+    -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+.tour, .tour-guides {
+    padding: 1.5em;
+    margin-bottom: 3em;
+}
+h3 {
+    font-size: 20px;
+}
+h1, h2, h3, h4, h5 {
+    color: rgb(50, 50, 50);
+    line-height: 1.5em;
+    font-family: "Open Sans", sans-serif;
+    margin-bottom: 1em;
+}
+h3 {
+    font-size: 24.5px;
+}
+h1, h2, h3 {
+    line-height: 40px;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 10px 0px;
+    color: inherit;
+    line-height: 20px;
+    font-family: inherit;
+    font-weight: bold;
+    text-rendering: optimizelegibility;
+}
+.tour-info {
+    background: rgb(255, 255, 255);
+    margin: -25px 0px 0px;
+    padding: 10px 20px;
+    transition:margin 1s;
+    left: -1px;
+    right: -1px;
+    display: inline;
+    position: absolute;
+    z-index: -1;
+    -webkit-transition: margin 1s ease;
+    -moz-transition: margin 1s ease;
+    -o-transition: margin 1s ease;
+}
+.tour .tour-duration {
+    float: right;
+}
+.tour .tour-place {
+    float: left;
+}
+.tour-info i::before {
+    margin: 0px 10px 0px 0px;
+    top: 2px;
+}
+.icon-map-marker::before {
+    content: "\f041";
+}
+[class^='icon-']::before, [class*=' icon-']::before {
+    text-decoration: inherit;
+    display: inline-block;
+    speak: none;
+}
+[class^='icon-'], [class*=' icon-'] {
+    background-position: 0px 0px;
+    width: auto;
+    height: auto;
+    line-height: normal;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    margin-top: 0px;
+    vertical-align: baseline;
+    display: inline;
+    background-image: none;
+    background-repeat: repeat;
+    -webkit-font-smoothing: antialiased;
+}
+.icon-map-marker {
+    background-position: -24px -72px;
+}
+[class^='icon-'], [class*=' icon-'] {
+    background-position: 14px 14px;
+    width: 14px;
+    height: 14px;
+    line-height: 14px;
+    margin-top: 1px;
+    vertical-align: text-top;
+    display: inline-block;
+    background-image: url("../img/glyphicons-halflings.png");
+    background-repeat: no-repeat;
+}
+i::before {
+    color: rgb(52, 152, 219);
+    font-size: 24px;
+    position: relative;
+}
+.icon-time::before {
+    content: "\f017";
+}
+.icon-time {
+    background-position: -48px -24px;
+}
+.zoom {
+    overflow: hidden;
+    display: block;
+    position: relative;
+}
+a {
+    transition:0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+}
+a {
+    text-decoration: none;
+}
+a {
+    color: rgb(0, 136, 204);
+    text-decoration: none;
+}
+.zoom img {
+    width: 100%;
+}
+img {
+    border: 0px currentColor;
+    border-image: none;
+    height: auto;
+    vertical-align: middle;
+    -ms-interpolation-mode: bicubic;
+    max-width: 100%;
+}
+img {
+    border: 0px currentColor;
+    border-image: none;
+    height: auto;
+    vertical-align: middle;
+    -ms-interpolation-mode: bicubic;
+    max-width: 100%;
+}
+.zoomOverlay {
+    transition:0.4s linear;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    display: none;
+    position: absolute;
+    -webkit-transition: all 0.4s linear;
+    -moz-transition: all 0.4s linear;
+    -o-transition: all 0.4s linear;
+}
+.view {
+    background-position: center;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    position: absolute;
+    opacity: 1;
+    background-image: url("../images/view.png");
+    background-repeat: no-repeat;
+}
+.tour h3 a, .tour-onecol h3 a {
+    color: rgb(50, 50, 50);
+}
+</style>
+<section class="container"><div class="row"><div class="page-container span9"><div class="row">
+    <h3 class="categoryTitle"><span>Kategorije</span></h3>
+
+                        <div class="articles-container">
+
+                            <div class="span3 offsetq1">
+                                <article class="tour article-box">
+
+                                    <h3><a href="roma-single.html">Hrana</a></h3>
+
+                                    <figure>
+                                        <a class="zoom" href="http://cdn.morguefile.com/imageData/public/files/e/ecerroni/preview/fldr_2008_11_13/file000638932996.jpg" data-rel="prettyPhoto">
+                                            <img alt="" src="http://cdn.morguefile.com/imageData/public/files/e/ecerroni/preview/fldr_2008_11_13/file000638932996.jpg">
+                                            <div class="zoomOverlay"><span class="view"></span></div>
+                                        </a>
+                                    </figure>
+
+                                    <div class="tour-info">
+
+                                        
+                                         <p>asdasdasdasd</p>
+                                        <p>asdasdasdasd</p>
+
+                                    </div><!-- end .tour-info -->
+
+                                </article><!-- end .tour -->
+                            </div><!-- end .span3 -->
+
+                            <div class="span3">
+                                <article class="tour article-box">
+
+                                    <h3><a href="#">Piće</a></h3>
+
+                                    <figure>
+                                        <a class="zoom" href="http://cdn.morguefile.com/imageData/public/files/m/mur308/preview/fldr_2008_11_28/file0001657671889.jpg" data-rel="prettyPhoto">
+                                            <img alt="" src="http://cdn.morguefile.com/imageData/public/files/m/mur308/preview/fldr_2008_11_28/file0001657671889.jpg">
+                                            <div class="zoomOverlay"><span class="view"></span></div>
+                                        </a>
+                                    </figure>
+
+                                    <div class="tour-info">
+
+                                        
+                                         <p>asdasdasdasd</p>
+                                        <p>asdasdasdasd</p>
+
+                                    </div><!-- end .tour-info -->
+
+                                </article><!-- end .tour -->
+                            </div><!-- end .span3 -->
+
+                            <div class="span3">
+                                <article class="tour article-box">
+
+                                    <h3><a href="#">Foto&Video</a></h3>
+
+                                    <figure>
+                                        <a class="zoom" href="http://cdn.morguefile.com/imageData/public/files/m/mmsz/preview/fldr_2008_11_28/file0001796747225.jpg" data-rel="prettyPhoto">
+                                            <img alt="" src="http://cdn.morguefile.com/imageData/public/files/m/mmsz/preview/fldr_2008_11_28/file0001796747225.jpg">
+                                            <div class="zoomOverlay"><span class="view"></span></div>
+                                        </a>
+                                    </figure>
+
+                                    <div class="tour-info">
+
+                                        
+                                        <p>asdasdasdasd</p>
+                                        <p>asdasdasdasd</p>
+
+
+                                    </div><!-- end .tour-info -->
+
+                                </article><!-- end .tour -->
+                            </div><!-- end .span3 -->
+
+                            <div class="span3">
+                                <article class="tour article-box">
+
+                                    <h3><a href="single-tour.html">Muzika</a></h3>
+
+                                    <figure>
+                                        <a class="zoom" href="http://cdn.morguefile.com/imageData/public/files/h/hotblack/preview/fldr_2010_08_15/file451281865013.jpg" data-rel="prettyPhoto">
+                                            <img alt="" src="http://cdn.morguefile.com/imageData/public/files/h/hotblack/preview/fldr_2010_08_15/file451281865013.jpg">
+                                            <div class="zoomOverlay"><span class="view"></span></div>
+                                        </a>
+                                    </figure>
+
+                                    <div class="tour-info">
+
+                                        <p>asdasdasdasd</p>
+                                        <p>asdasdasdasd</p>
+
+                                    </div><!-- end .tour-info -->
+
+                                </article><!-- end .tour -->
+                            </div><!-- end .span3 -->
+
+                            <div class="span3">
+                                <article class="tour article-box">
+
+                                    <h3><a href="single-tour.html">Dekoracija i cvijeće</a></h3>
+
+                                    <figure>
+                                        <a class="zoom" href="http://cdn.morguefile.com/imageData/public/files/k/kconnors/preview/fldr_2004_01_04/file0001311042047.jpg" data-rel="prettyPhoto">
+                                            <img alt="" src="http://cdn.morguefile.com/imageData/public/files/k/kconnors/preview/fldr_2004_01_04/file0001311042047.jpg">
+                                            <div class="zoomOverlay"><span class="view"></span></div>
+                                        </a>
+                                    </figure>
+
+                                    <div class="tour-info">
+
+                                        <p>asdasdasdasd</p>
+                                        <p>asdasdasdasd</p>
+
+                                    </div><!-- end .tour-info -->
+
+                                </article><!-- end .tour -->
+                            </div><!-- end .span3 -->
+
+                            <div class="span3">
+                                <article class="tour article-box">
+
+                                    <h3><a href="#">Vjenčanice i odijela</a></h3>
+
+                                    <figure>
+                                        <a class="zoom" href="http://cdn.morguefile.com/imageData/public/files/k/kconnors/preview/fldr_2008_11_28/file0001019694893.jpg" data-rel="prettyPhoto">
+                                            <img alt="" src="http://cdn.morguefile.com/imageData/public/files/k/kconnors/preview/fldr_2008_11_28/file0001019694893.jpg">
+                                            <div class="zoomOverlay"><span class="view"></span></div>
+                                        </a>
+                                    </figure>
+
+                                    <div class="tour-info">
+
+                                         <p>asdasdasdasd</p>
+                                        <p>asdasdasdasd</p>
+
+                                    </div><!-- end .tour-info -->
+
+                                </article><!-- end .tour -->
+                            </div><!-- end .span3 -->
+
+                        </div>
+
+                    </div></div></div></section>
+</html>

@@ -6,6 +6,8 @@
      Dobro Dosli na stranicu <%= "#{@user.name_groom} i #{@user.name_bride} #{@user.last_name}" %>
    </div> 	
  </div>
+
+ <div class='container'>
  <% if signed_in? && current_user?(@user) %>
    <h3> <%= t('share_with_friends') %>: <%= t('page_url')+"/#{@user.name_groom}.#{@user.name_bride}.#{@user.last_name}" %>
    <% end %>
@@ -16,11 +18,9 @@
    <% end %>
  </div>
  <div id='story_content'>
-  <% if @user.story && @user.story.story_text %>
+ 
   <%= simple_format(@user.story.story_text) %>
-  <% else %>
-  <p> Jos nismo podjelili nasu pricu </p>
-  <% end %>
+  
   <% if current_user?(@user) %>
   <%= render 'stories/edit'  %>
   <% end %>
@@ -34,3 +34,4 @@
 <% end %>
 
 <%= render 'image_upload' %>
+</div>

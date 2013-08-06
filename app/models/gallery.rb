@@ -4,7 +4,12 @@ class Gallery < ActiveRecord::Base
   belongs_to :user
   has_many :photos, dependent: :destroy
 
-  validates :user_id, presence: true
+  validate :user_id_or_provider_id
 
+  def user_id_or_provider_id
+  	if !self.user_id && !self.provider_id
+  		 errors[:base] << ("Doslo je do greske")
+    end
+end
 
 end

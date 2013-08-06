@@ -1,230 +1,108 @@
-<header class="masthead">
-  <div class="container-carousel">
-    
-    <!-- Carousel
-================================================== -->
-    <div id="myCarousel" class="carousel slide">
-      <div class="carousel-inner">
-        <div class="item active">
-          <%= image_tag("./Carousel/carousel3.jpg") %>
-            <div class="container">
-              <div class="carousel-caption">
-                <h1 class="" style="color:#003366">
-                  Dobrodošli na Weddify!
-                </h1>
-                <p class="lead" style="color:#336699">
-                  Savršeni detalji. Očaravajuće ideje. Stvarna vjenčanja o kojima sanjate.
-                </p>
-                <p class="lead" style="color:#336699">
-                  Uz Weddify dignite noge u zrak i vrhunski isplanirajte vaš najvažniji dan!
-                </p>
-                <%= link_to "Registriraj se!", signup_path, class: "btn btn-large btn-default" %>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <%= image_tag("./Carousel/carousel5.jpg") %>
-                <div class="container">
-                  <div class="carousel-caption">
-                    <h1 style="color:#003366">
-                      Sve što je potrebno da ostvarite vaše savršeno vjenčanje!
-                    </h1>
-                    <p class="lead" style="color:#336699">
-                      Weddify će vas kroz 
-                      <span style="color: #f00;">
-                        <s>
-                          muke
-                        </s>
-                      </span>
-                      planiranja provesti u samo nekoliko klikova iz topline vašeg doma.
-                    </p>
-                    <%= link_to "Saznaj više!", signup_path, class: "btn btn-large btn-default" %>
-                    </div>
-                  </div>
-                </div>
-                <div class="item">
-                  <%= image_tag("./Carousel/carousel6.jpg") %>
-                    <div class="container">
-                      <div class="carousel-caption">
-                        <h1 style="color:#003366">
-                          Na našem blogu otkrijte šta treba a šta ne 
-                          <span style="color: #f00;">
-                            <s>
-                              treba
-                            </s>
-                          </span>
-                          .
-                        </h1>
-                        <p class="lead" style="color:#336699">
-                          Korisni savijeti i trikovi.
-                        </p>
-                        <%= link_to "Saznaj više!", signup_path, class: "btn btn-large btn-default" %>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                    &lsaquo;
-                  </a>
-                  <a class="right carousel-control" href="#myCarousel" data-slide="next">
-                    &rsaquo;
-                  </a>
-                </div>
-                <!-- /.carousel -->
-                
-                
-                
-                <div class="pull-right hidden-sm">
-                  
-                  <h1>
-                    <a href="#">
-                      <i class="glyphicon glyphicon-user">
-                      </i>
-                      
-                      <i class="glyphicon glyphicon-chevron-down">
-                      </i>
-                    </a>
-                  </h1>
-                </div>
-                
-              </div>
-              
-            </header>
-            
-            
-            
-            <!-- Top Nav -->
-            <div id="nav">
-              <div class="navbar hidden-phone well well-small">
-                <div class="navbar-inner header-drop-nav">
-                  
-                  
-                  <a href='home' class="navbar-brand" >
-                    
-                    <%= image_tag("logo.png", :size =>
-                      "140x20", :alt =>
-                      "Wedify", :class =>
+       <header class="main" id="men">
+
+      <div class="container">
+      
+        <a href='/home' class='logo'><%= image_tag('logo.png') %></a>
+
+      
+
+
+        <nav class="mobile hidden-desktop pull-right">
+
+          <select class="mobile-nav">
+            <option value="#">Naslovnica</option>
+            <option value="features">Features</option>
+            <option value=".our-company">About Us</option>
+            <option value=".our-team">Our Team</option>
+            <option value=".our-work">Our Work</option>
+            <option value=".pricing">Pricing</option>
+            <option value=".blog">Blog</option>
+            <option value=".contact">Get in touch</option>
+          </select>
+
+        </nav> <!-- nav.mobile -->
+
+        <nav class="main nav-collapse visible-desktop">
+
+          <ul class="inline">
+
+                  <!-- 1st dropdown -->
+          <ul class="nav nav-tabs">
+           <li class="dropdown"> <!-- DropDown Menu -->
+              <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                <%= image_tag("./menu/location.png", :size =>
+                  "30x30", :class =>
+                  "round") %>
+                </a>
+                <ul class="dropdown-menu">
+                  <li class="dropdown-header">
+                    <%= image_tag("./menu/location_drop.png", :size =>
+                      "20x20", :class =>
                       "round") %>
-                      
+                      Promijeni grad
+                    </li>
+                    <li>
+                      <a href="#">
+                        Sarajevo 
+                      </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      Tuzla 
                     </a>
-                    <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
-                    
-                    
-                    <ul class="nav navbar-nav" style="float:right">
-                      <!-- Read about Bootstrap dropdowns at http://twitter.github.com/bootstrap/javascript.html#dropdowns -->
-                      <!-- TEST -->
-                      <li class="dropdown">
-                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                          <%= image_tag("./Menu/location.png", :size =>
-                            "30x30", :class =>
-                            "round") %>
-                          </a>
-                          <ul class="dropdown-menu">
-                            <li class="dropdown-header">
-                              <%= image_tag("./Menu/location_drop.png", :size =>
-                                "20x20", :class =>
-                                "round") %>
-                                Promijeni grad
-                              </li>
-                              <li>
-                                <a href="#">
-                                  Sarajevo 
-                                  <i class="icon-arrow-right">
-                                  </i>
-                                </a>
-                            </li>
-                            <li>
-                              <a href="#">
-                                Tuzla 
-                                <i class="icon-arrow-right">
-                                </i>
-                              </a>
-                            </li>
-                            <li>
-                              <a href="#">
-                                Mostar 
-                                <i class="icon-arrow-right">
-                                </i>
-                              </a>
-                            </li>
-                            <li>
-                              <a href="#">
-                                Banja Luka 
-                                <i class="icon-arrow-right">
-                                </i>
-                              </a>
-                            </li>
-                            <li class="divider">
-                            </li>
-                            <li class="dropdown-header">
-                              <%= image_tag("./Menu/lang_switch.png", :size =>
-                                "20x20", :class =>
-                                "round") %>
-                                Promijeni jezik
-                              </li>
-                              <li>
-                                <a href="#">
-                                  <%= image_tag("./Menu/english.png", :size =>
-                                    "20x20", :class =>
-                                    "round") %>
-                                    Engleski 
-                                    <i class="icon-arrow-right">
-                                    </i>
-                                  </a>
-                                </li>
-                            </ul>
+                  </li>
+                  <li>
+                    <a href="#">
+                      Mostar 
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      Banja Luka 
+                    </a>
+                  </li>
+                  <li class="divider">
+                  </li>
+                  <li class="dropdown-header">
+                    <%= image_tag("./menu/lang_switch.png", :size =>
+                      "20x20", :class =>
+                      "round") %>
+                      Promijeni jezik
+                    </li>
+                    <li>
+                      <a href="#">
+                        <%= image_tag("./menu/english.png", :size =>
+                          "20x20", :class =>
+                          "round") %>
+                          Engleski 
                         </a>
                       </li>
-                      
-                      
-                      <li>
-                        <a href="home">
-                          Wedify
-                        </a>
-                      </li>
-                      <li>
-                        <a href="home">
-                          Kategorije
-                        </a>
-                      </li>
-                      <li>
-                        <a href="about">
-                          O Nama
-                        </a>
-                      </li>
-                      <li>
-                        <a href="contact">
-                          Kontakt
-                        </a>
-                      </li>
-                      <li>
-                        <a href="blog">
-                          Blog
-                        </a>
-                      </li>
+                  </ul>
+              </a>
+            </li> <!-- end of DropDown Menu-->
+          
 
-                      <% if signed_in? %>
-                      <li> <%= link_to(t('profile'),current_user) %> </li>
-                      <li> <a href='/signout'> <%= t('signout') %></a> </li>
-                      <% else %>
-                      <li> <a href='/signin'> <%= t('signin') %> </a> </li>
-                      <% end %>
-                      
-                    </ul>
-                    
-                    
-                    
-                    <form class="navbar-form pull-right hidden-tablet" id="search-nav">
-                      <input class="span3" type="text" placeholder="">
-                      <button type="submit" class="btn btn-default">
-                        Traži
-                      </button>
-                    </form>
-                    
-                  </div>
-                </div>
-              </div>
+            <li><a href="/home">Home</a></li>
+            <li><a href="/categories">Kategorije</a></li>
+            <li><a href="/about">O nama</a></li>
+            <li><a href="/contact">Kontakt</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <% if signed_in? %>
+            <li> <%= link_to(t('profile'),current_user) %> </li>
+            <li> <a href='/signout'> <%= t('signout') %></a> </li>
+            <% else %>
+            <li> <a href='/signin'> <%= t('signin') %> </a> </li>
+            <% end %>
+          </ul>
+          </ul>
 
+        </nav> <!-- /nav.main -->
         
-  
-              
+      </div> <!-- /.container -->
+
+    </header> <!-- /header.main -->
+
+ 
+
+
+

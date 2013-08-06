@@ -1,5 +1,397 @@
 <%= provide(:title, 'Feed') %>
 
-<%= render 'layouts/middle' %>
+ <section class="features">
 
-   
+      <div class="container">
+
+        <div class="row-fluid features-wrapper">
+
+          <div class="span3 center feature">
+
+            <a href='#'><%= image_tag('./services/budget.png') %></a>
+            <h2>Kalkulator financija</h2>
+            <p>
+             Ponosni smo što vam možemo pružiti jedinstvene usluge financijskog kalkulatora. Uz pažljivo birane parametre uštedite koliko god je moguće i ne potrošite više ni feninga više no što trebate. Kalkulator financija je produkat dugog i marljivog prikupljanja svih podataka i parametara koji vam trebaju pri planiranju vjenčanja i izrade finacijskog plana.
+           </p>
+            <a class="button small" href="#" data-target="feature1">Saznaj više</a>
+            
+          </div> <!-- /.span4 center feature -->
+          
+          <div class="span3 center feature">
+          
+            <a href='#'><%= image_tag('./services/invitation.png') %></a>
+            <h2>Lista gostiju</h2>
+            <p>
+            Potrudili smo se da sve podatke o gostima vašeg vjenčanja imate dostupne na jednom mjestu uz vrlo jednostavan način integracije sa socijalnim mrežama. U samo nekoliko klikova pozovite sve svoje najdraže i podijelite s njima svoje radosne vijesti.
+            </p>
+            <a class="button small" href="#" data-target="feature2">Saznaj više</a>
+            
+          </div> <!-- /.span4 center feature -->
+          
+          <div class="span3 center feature">
+          
+            <a href='#'><%= image_tag('./services/wishlist.png') %></a>
+            <h2>Lista želja</h2>
+            <p>
+             Još jedan besplatan alat koji vam pružamo na korištenje. Uz Listu želja nećete nikada smrknutog izraza otvarati duple poklone i darove. Lista želja se brine da sve vaše želje budu ispunjene i da vas vaši gosti na najbolji mogući način iznenade jedinstvenim i originalnim poklonima.
+            </p>
+            <a class="button small" href="#" data-target="feature3">Saznaj više</a>
+            
+          </div> <!-- /.span4 --> 
+
+
+          <div class="span3 center feature">
+          
+            <a href='#'><%= image_tag('./services/thermometer.png') %></a>
+            <h2>Budžet toplomjer</h2>
+            <p>Quisque ut augue libero, ut venenatis turpis. Duis suscipit, dui sit amet egestas fermentum, felis tortor venenatis magna, id imperdiet lectus sem non ipsum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec cursus varius ligula, at mollis leo posuere eget. Morbi vel facilisis augue.</p>
+            <a class="button small" href="#" data-target="feature3">Saznaj više</a>
+          </div> <!-- /.span4 --> 
+
+
+
+          
+        </div> <!-- /.row-fluid --> 
+        
+      </div> <!-- /.container -->
+
+    </section> <!-- /.features -->
+
+
+    <section class="testimonials transparent bordered">
+
+      <div class="container">
+      
+        
+        <!-- Categories -->
+         <ul class="ca-menu">
+                    <li id="ca-menu-round">
+                        <a href="#">
+                            <span class="ca-icon"><%= image_tag('./categories/hrana.png', :alt =>'Portfolio Item') %></span>
+                            <div class="ca-content">
+                                <h2 class="ca-main">Hrana&piće</h2>
+                                <h3 class="ca-sub">Izaberi</h3>
+                            </div>
+                        </a>
+                    </li>
+                    <li id="ca-menu-round">
+                        <a href="#">
+                            <span class="ca-icon"><%= image_tag('./categories/mjesto.png', :alt =>'Portfolio Item') %></span>
+                            <div class="ca-content">
+                                <h2 class="ca-main">Mjesto</h2>
+                                <h3 class="ca-sub">Izaberi</h3>
+                            </div>
+                        </a>
+                    </li>
+                    <li id="ca-menu-round">
+                        <a href="#">
+                            <span class="ca-icon"><%= image_tag('./categories/fotograf.png', :alt =>'Portfolio Item') %></span>
+                            <div class="ca-content">
+                                <h2 class="ca-main">Foto&Video usluge</h2>
+                                <h3 class="ca-sub">Izaberi</h3>
+                            </div>
+                        </a>
+                    </li>
+                    <li id="ca-menu-round">
+                        <a href="#">
+                            <span class="ca-icon"><%= image_tag('./categories/muzika.png', :alt =>'Portfolio Item') %></span>
+                            <div class="ca-content">
+                                <h2 class="ca-main">Muzika</h2>
+                                <h3 class="ca-sub">Izaberi</h3>
+                            </div>
+                        </a>
+                    </li>
+                    <li id="ca-menu-round">
+                        <a href="#">
+                            <span class="ca-icon"><%= image_tag('./categories/vjencanica.png', :alt =>'Portfolio Item') %></span>
+                            <div class="ca-content">
+                                <h2 class="ca-main">Vjenčanice</h2>
+                                <h3 class="ca-sub">Izaberi</h3>
+                            </div>
+                        </a>
+                    </li>
+
+                </ul>
+
+
+
+
+
+
+
+
+
+        
+      </div> <!-- /.container -->
+
+    </section> <!-- /.testimonials -->
+
+    <section class="our-work">
+
+      <div class="container">
+      
+        <h1 class="hero">Iskustva drugih.</h1>
+        <p class="sub-hero">Nečiji su snovi već ispunjeni. Pridruži se i ti.</p>
+
+        <div class="portfolio-controls clearfix">
+
+          <ul id="portfolio-filters" class="inline nmp none pull-left">
+            <li><a href="#" data-filter="">Sarajevo</a></li>
+            <li><a href="#" data-filter=".creative">Mostar</a></li>
+            <li><a href="#" data-filter=".business">Tuzla</a></li>
+            <li><a href="#" data-filter=".artwork">Banja Luka</a></li>
+          </ul>
+
+          <div class="pull-right hidden-phone">
+
+            <span>Kolona:</span>
+            <select id="portfolio-selector">
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+
+          </div> <!-- /.pull-right -->
+
+        </div> <!-- /.portfolio-controls --> 
+
+        <div id="portfolio" data-columns="4">
+    
+              <article class="portfolio creative">
+                <a href="portfolio/portfolio-single.html" class="portfolio-ajax" data-title="First portfolio item" data-subtitle="Here is the caption for the first portfolio item">
+                  <div class="holder">
+                    <div class="mask"></div>
+                    <div class="type">
+                      <i class="icon icon-picture"></i>
+                    </div>
+                    <div class="caption">
+                      <p>Emir&Lejla</p>
+                    </div>
+                    <%= image_tag('./portfolio/portfolio1.jpg', :alt =>'Portfolio Item') %>
+                  </div>
+                </a>   
+              </article>
+
+              <article class="portfolio artwork">
+                <a href="portfolio/portfolio-single.html" class="portfolio-ajax" data-title="Second portfolio item" data-subtitle="Here is the caption for the second portfolio item">
+                  <div class="holder">
+                    <div class="mask"></div>
+                    <div class="type">
+                      <i class="icon icon-film"></i>
+                    </div>
+                    <div class="caption">
+                      <p>Mario&Ivana</p>
+                    </div>
+                    <%= image_tag('./portfolio/portfolio2.jpg', :alt =>'Portfolio Item') %>
+                  </div>   
+                </a>
+              </article>
+
+              <article class="portfolio business">
+                <a href="portfolio/portfolio-single.html" class="portfolio-ajax" data-title="Third portfolio item" data-subtitle="Here is the caption for the third portfolio item">
+                  <div class="holder">
+                    <div class="mask"></div>
+                    <div class="type">
+                      <i class="icon icon-music"></i>
+                    </div>
+                    <div class="caption">
+                      <p>Mirza&Mahira</p>
+                    </div>
+                    <%= image_tag('./portfolio/portfolio3.jpg', :alt =>'Portfolio Item') %>
+                  </div>          
+                </a>
+              </article>
+
+              <article class="portfolio creative">
+                <a href="portfolio/portfolio-single.html" class="portfolio-ajax" data-title="Fourth portfolio item" data-subtitle="Here is the caption for the fourth portfolio item">
+                  <div class="holder">
+                    <div class="mask"></div>
+                    <div class="type">
+                      <i class="icon icon-link"></i>
+                    </div>
+                    <div class="caption">
+                      <p>Mirza&Naida</p>
+                    </div>
+                    <%= image_tag('./portfolio/portfolio4.jpg', :alt =>'Portfolio Item') %>
+                  </div>  
+                </a>
+              </article>
+
+
+              <article class="portfolio business">
+                <a href="portfolio/portfolio-single.html" class="portfolio-ajax" data-title="Sixth portfolio item" data-subtitle="Here is the caption for the sixth portfolio item">
+                  <div class="holder">
+                    <div class="mask"></div>
+                    <div class="type">
+                      <i class="icon icon-film"></i>
+                    </div>
+                    <div class="caption">
+                      <p>Robert&Dijana</p>
+                    </div>
+                    <%= image_tag('./portfolio/portfolio6.jpg', :alt =>'Portfolio Item') %>
+                  </div>          
+                </a>
+              </article>
+
+
+              <article class="portfolio business">
+                <a href="portfolio/portfolio-single.html" class="portfolio-ajax" data-title="Third portfolio item" data-subtitle="Here is the caption for the third portfolio item">
+                  <div class="holder">
+                    <div class="mask"></div>
+                    <div class="type">
+                      <i class="icon icon-music"></i>
+                    </div>
+                    <div class="caption">
+                      <p>Tarik&Elma</p>
+                    </div>
+                    <%= image_tag('./portfolio/portfolio7.jpg', :alt =>'Portfolio Item') %>
+                  </div>          
+                </a>
+              </article>
+
+
+              <article class="portfolio business">
+                <a href="portfolio/portfolio-single.html" class="portfolio-ajax" data-title="Third portfolio item" data-subtitle="Here is the caption for the third portfolio item">
+                  <div class="holder">
+                    <div class="mask"></div>
+                    <div class="type">
+                      <i class="icon icon-music"></i>
+                    </div>
+                    <div class="caption">
+                      <p>Džihad&Krstenka</p>
+                    </div>
+                    <%= image_tag('./portfolio/portfolio8.jpg', :alt =>'Portfolio Item') %>
+                  </div>          
+                </a>
+              </article>
+
+
+              <article class="portfolio business">
+                <a href="portfolio/portfolio-single.html" class="portfolio-ajax" data-title="Third portfolio item" data-subtitle="Here is the caption for the third portfolio item">
+                  <div class="holder">
+                    <div class="mask"></div>
+                    <div class="type">
+                      <i class="icon icon-music"></i>
+                    </div>
+                    <div class="caption">
+                      <p>Tom&Jerry</p>
+                    </div>
+                    <%= image_tag('./portfolio/portfolio9.jpg', :alt =>'Portfolio Item') %>
+                  </div>          
+                </a>
+              </article>
+
+               <article class="portfolio creative">
+                <a href="portfolio/portfolio-single.html" class="portfolio-ajax" data-title="Fourth portfolio item" data-subtitle="Here is the caption for the fourth portfolio item">
+                  <div class="holder">
+                    <div class="mask"></div>
+                    <div class="type">
+                      <i class="icon icon-link"></i>
+                    </div>
+                    <div class="caption">
+                      <p>Mirza&Naida</p>
+                    </div>
+                    <%= image_tag('./portfolio/portfolio4.jpg', :alt =>'Portfolio Item') %>
+
+                  <article class="portfolio business">
+                    <a href="portfolio/portfolio-single.html" class="portfolio-ajax" data-title="Third portfolio item" data-subtitle="Here is the caption for the third portfolio item">
+                      <div class="holder">
+                        <div class="mask"></div>
+                        <div class="type">
+                          <i class="icon icon-music"></i>
+                        </div>
+                        <div class="caption">
+                      <p>Džihad&Krstenka</p>
+                     </div>
+                    <%= image_tag('./portfolio/portfolio8.jpg', :alt =>'Portfolio Item') %>
+                  </div>          
+                </a>
+              </article>
+
+
+
+
+                  </div>  
+                </a>
+              </article>
+
+          </div> <!-- /#portfolio -->
+        
+      </div> <!-- /.container -->
+
+    </section> <!-- /.our-work -->
+
+    <section class="portfolio-single">
+      
+      <a class="portfolio-back">Close</a>
+      <div class="container">
+
+        <a class="portfolio-next">Next<i class="icon-arrow-right"></i></a>
+        <a class="portfolio-prev"><i class="icon-arrow-left"></i>Previous</a>
+
+        <h1 class="portfolio-title hero"></h1>
+        <p class="sub-hero portfolio-subtitle"></p>
+
+        <div class="basket"></div> <!-- /.basket -->
+
+      </div> <!-- /.container -->
+
+    </section> <!-- /.portfolio-single-->
+
+    <section class="pricing bordered">
+
+      <div class="container">
+
+      
+
+      </div> <!-- /.container -->
+
+    </section> <!-- /.pricing -->
+
+
+
+
+    <section class="blog">
+
+      <div class="container">
+
+         <div class="container">
+
+        <h1 class="hero">Mediji o nama</h1>
+        <div class="row-fluid">
+              
+             <!-- Media -->
+           <div id="clients">
+        <div class="container">
+            <div class="row">
+                <div class="span2 client">
+                    <div class="img client1"></div>
+                </div>
+                <div class="span2 client">
+                    <div class="img client2"></div>
+                </div>
+                <div class="span2 client">
+                    <div class="img client3"></div>
+                </div>
+                <div class="span2 client">
+                    <div class="img client4"></div>
+                </div>
+                <div class="span2 client">
+                    <div class="img client5"></div>
+                </div>
+                <div class="span2 client">
+                    <div class="img client6"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div> <!-- /.row-fluid -->
+      </div> <!-- /.container -->
+      </div> <!-- /.container -->
+    </section> <!-- /.blog --> 
+
+
+
+
+
+  </div> <!-- /.wrapper --> 

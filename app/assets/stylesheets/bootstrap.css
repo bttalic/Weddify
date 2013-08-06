@@ -6060,7 +6060,13 @@ a.badge:focus {
   left: auto;
 }
 
-
+.carousel-control:hover,
+.carousel-control:focus {
+  color: #ffffff;
+  text-decoration: none;
+  opacity: 0.9;
+  filter: alpha(opacity=90);
+}
 
 .carousel-indicators {
   position: absolute;

@@ -7,6 +7,9 @@ Weddify::Application.routes.draw do
   resources :items
   resources :photos
 
+  resources :galleries
+  resources :providers
+
   root to: 'static_pages#home'
   match '/home', to: 'static_pages#home'
   match '/about', to: 'static_pages#about'
@@ -17,7 +20,8 @@ Weddify::Application.routes.draw do
   match '/signout', to: 'sessions#destroy'
   match '/signin', to: 'sessions#new'
   
-   #match ":name_groom.:name_bride.:last_name", to: 'users#show'
+   match ":name_groom.:name_bride.:last_name", to: 'users#show'
+    match ":name", to: 'providers#show'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

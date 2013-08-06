@@ -1,8 +1,7 @@
 <%= provide(:title, 'Registracija') %>
 
-
-
-<div class="registration-form" style='position:relative; left:20%'>
+<section class='features'>
+<div class='container'>
 	<h1 style="text-align:center">Prijava</h1>
 
 	<%= form_for @user, :url => users_path, :html => { :multipart => true } do |f| %>
@@ -31,5 +30,5 @@
 <%= f.submit "Kreiraj Račun", class: "btn btn-default btn-large btn-block" %>
 <% end %>
 </div>
-
+<section class='features'>
 

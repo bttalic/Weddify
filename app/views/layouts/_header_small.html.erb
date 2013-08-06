@@ -1,0 +1,109 @@
+
+       <header class="main header_fixed" id="men2">
+       
+        <div class="container">
+
+          <a href='/home' class='logo'><%= image_tag('logo.png') %></a>
+
+
+
+
+          <nav class="mobile hidden-desktop pull-right">
+
+            <select class="mobile-nav">
+              <option value="#">Naslovnica</option>
+              <option value="features">Features</option>
+              <option value=".our-company">About Us</option>
+              <option value=".our-team">Our Team</option>
+              <option value=".our-work">Our Work</option>
+              <option value=".pricing">Pricing</option>
+              <option value=".blog">Blog</option>
+              <option value=".contact">Get in touch</option>
+            </select>
+
+          </nav> <!-- nav.mobile -->
+
+          <nav class="main nav-collapse visible-desktop">
+
+            <ul class="inline">
+
+              <!-- 1st dropdown -->
+              <ul class="nav nav-tabs">
+               <li class="dropdown"> <!-- DropDown Menu -->
+                <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                  <%= image_tag("./menu/location.png", :size =>
+                    "30x30", :class =>
+                    "round") %>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li class="dropdown-header">
+                      <%= image_tag("./menu/location_drop.png", :size =>
+                        "20x20", :class =>
+                        "round") %>
+                        Promijeni grad
+                      </li>
+                      <li>
+                        <a href="#">
+                          Sarajevo 
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          Tuzla 
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          Mostar 
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          Banja Luka 
+                        </a>
+                      </li>
+                      <li class="divider">
+                      </li>
+                      <li class="dropdown-header">
+                        <%= image_tag("./menu/lang_switch.png", :size =>
+                          "20x20", :class =>
+                          "round") %>
+                          Promijeni jezik
+                        </li>
+                        <li>
+                          <a href="#">
+                            <%= image_tag("./menu/english.png", :size =>
+                              "20x20", :class =>
+                              "round") %>
+                              Engleski 
+                            </a>
+                          </li>
+                        </ul>
+                      </a>
+                    </li> <!-- end of DropDown Menu-->
+
+
+                    <li><a href="/home">Home</a></li>
+                    <li><a href="/categories">Kategorije</a></li>
+                    <li><a href="/about">O nama</a></li>
+                    <li><a href="/contact">Kontakt</a></li>
+                    <li><a href="/blog">Blog</a></li>
+                    <% if signed_in? %>
+                    <li> <%= link_to(t('profile'),current_user) %> </li>
+                    <li> <a href='/signout'> <%= t('signout') %></a> </li>
+                    <% else %>
+                    <li> <a href='/signin'> <%= t('signin') %> </a> </li>
+                    <% end %>
+                  </ul>
+                </ul>
+
+              </nav> <!-- /nav.main -->
+
+            </div> <!-- /.container -->
+         
+          </header> <!-- /header.main -->
+
+
+
+
+

@@ -27,6 +27,7 @@ class UsersController < ApplicationController
 	def create
 		@user = User.new(params[:user])
 		if @user.save
+			UserMailer.welcome_email(@user)
 			@user.wishlist=Wishlist.new
 			@user.wishlist.user_id=@user.id
 			@user.wishlist.save

@@ -3,52 +3,54 @@
 <head >
 	<title><%= full_title(yield(:title)) %></title>
 
-	<!-- Latest compiled and minified CSS -->
- <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/css/bootstrap.min.css" rel="stylesheet" type="text/css">
- 
- <!-- Latest compiled and minified JavaScript -->
- <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/js/bootstrap.min.js"></script>
+
+	<!-- IE -->
+	<!--[if lt IE 9]>
+		<link rel="stylesheet" type="text/css" href="css/ie.css" />
+		<![endif]-->
+	<!--[if lt IE 10]>
+		<script type="text/javascript" src="js/PIE.js"></script>
+		<![endif]-->
+
+
+		<%= stylesheet_link_tag "application", media: "all" %>
+		<%= javascript_include_tag "application" %>
+		<%= csrf_meta_tags %>
+
+
+		<%= csrf_meta_tags %>
+		<%= render 'layouts/shim' %>
+
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- IE -->
+	<!--[if lt IE 9]>
+		<link rel="stylesheet" type="text/css" href="css/ie.css" />
+		<![endif]-->
+	<!--[if lt IE 10]>
+		<script type="text/javascript" src="js/PIE.js"></script>
+		<![endif]-->
+
+	</head>
+
+	<body class='home' >
+
+
+			<% if current_page?(root_url) || current_page?('/signin') || current_page?('/signup') %>
+			<%= render 'layouts/carosel' %>
+			<% end %>
+			<%= render 'layouts/header' %>
 
 
 
-	<%= stylesheet_link_tag "application", media: "all" %>
-	<%= javascript_include_tag "application" %>
-	<%= csrf_meta_tags %>
-	
-	
-	<%= csrf_meta_tags %>
-	<%= render 'layouts/shim' %>
-</head>
-<body >
-	<%= render 'layouts/header' %>
 
+			<% flash.each do |key, value| %>
+			<%= content_tag(:div, value, class: "alert alert-#{key}") %>
+			<% end %>
+			<%= yield %>
 
+			<%= render 'layouts/footer' %>
 
-	<% flash.each do |key, value| %>
-	<%= content_tag(:div, value, class: "alert alert-#{key}") %>
-	<% end %>
-	<%= yield %>
-
-
-
-<%= render 'layouts/footer' %>
-
-
-
-<!-- Le javascript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script>
-      !function ($) {
-        $(function(){
-          // carousel demo
-          $('#myCarousel').carousel()
-        })
-      }(window.jQuery)
-    </script>
-    <script src="../assets/js/holder/holder.js"></script>
-
-
-
-</body>
-</html>
+		</body>
+		</html>
